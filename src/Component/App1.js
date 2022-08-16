@@ -4,11 +4,13 @@ export const App1 = () => {
     const [count, setCount] = useState(4);
 
     const decrementCount = () => {
-        setCount(count - 1);
+        setCount((prevCount) => prevCount - 1);
+        console.log("decrement")
     };
-
+    
     const incrementCount = () => {
-        setCount(count + 1);
+        setCount((prevCount) => prevCount + 1);
+        console.log("increment")
     };
 
     return (
